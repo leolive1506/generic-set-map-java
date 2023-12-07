@@ -7,10 +7,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import set.exercicie.InstructorEx;
 import set.exercicie.Loggin;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Loggin.main();
+        // Loggin.main();
+        InstructorEx.main();
     }
 }
