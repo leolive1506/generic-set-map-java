@@ -102,7 +102,7 @@ Number x = myNums.get(0);
 - É uma interface e suas principais implementações são:
   - hashSet - mais rapido (operações O(1) em tabela hash) e **não garante a ordem**
   - TreeSet - mais rapido (operações O(log(n)) em arvores rubro-negra) e ordenado pelo compareTo do objeto (Ou Comparator)
-    - QUanod usar implementar **compareTo**
+    - Quanod usar implementar **compareTo**
   - LinkedHashSet - velocidade intermediaria e elementos ficam na ordem que foram implementados
 - metodos importantes
   - add(obj), remove(obj), container(obj)
