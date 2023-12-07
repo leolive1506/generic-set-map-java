@@ -20,7 +20,7 @@ import set.entities.LogEntry;
 public class Loggin {
   public static void main() {
     Scanner sc = new Scanner(System.in);
-    Set<LogEntry> users = new TreeSet<>();
+    Set<LogEntry> users = new HashSet<>();
 
     System.out.print("Enter file full path: ");
     String path = sc.next();
