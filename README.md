@@ -80,6 +80,17 @@ myNums.add(3.14);
 Number x = myNums.get(0); 
 ```
 
+# hasCode e equals
+- op classe Object
+- equals: lento, resposta 100%
+- hasCode: rapido, resposta positiva não é 100%
+
+## hasCode
+- retorna numero inteiro representado um codigo gerado a partir das informações do objeto
+- um objeto com mesmo valor teria que gerar um mesmo hashCode
+  - mas como numero inteiro tem um limite pode acontecer de dois objetos serem verdadeiros e mesmo assim serem diferentes
+- Muito rapido, usado em listas grandes para comparar objetos
+  - caso seja igual, confirmar novamente com equals
 # Dicas gerais
 - list.compareTo
   - Compara se o primeiro é maior que segundo (do parametro)
