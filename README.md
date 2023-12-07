@@ -91,6 +91,26 @@ Number x = myNums.get(0);
   - mas como numero inteiro tem um limite pode acontecer de dois objetos serem verdadeiros e mesmo assim serem diferentes
 - Muito rapido, usado em listas grandes para comparar objetos
   - caso seja igual, confirmar novamente com equals
+
+# Set<T>
+- representa um conjunto de elementos
+- el não possui posições
+- podem possuir ordem
+- não admite repetições
+- acesso, inserção e remoção de elementos são rapidos
+- oferece eficientes de conjunto: interseção, união e diferença
+- É uma interface e suas principais implementações são:
+  - hashSet - mais rapido (operações O(1) em tabela hash) e **não garante a ordem**
+  - TreeSet - mais rapido (operações O(log(n)) em arvores rubro-negra) e ordenado pelo compareTo do objeto (Ou Comparator)
+    - QUanod usar implementar **compareTo**
+  - LinkedHashSet - velocidade intermediaria e elementos ficam na ordem que foram implementados
+- metodos importantes
+  - add(obj), remove(obj), container(obj)
+    - baseado em equals e hashCode
+    - se equals e hashCode não existir, é usada comparação de ponteiros
+  - clear()
+  - size()
+  - removeIf(predicate)
 # Dicas gerais
 - list.compareTo
   - Compara se o primeiro é maior que segundo (do parametro)
