@@ -15,12 +15,12 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-import set.entities.User;
+import set.entities.LogEntry;
 
 public class Loggin {
   public static void main() {
     Scanner sc = new Scanner(System.in);
-    Set<User> users = new TreeSet<>();
+    Set<LogEntry> users = new TreeSet<>();
 
     System.out.print("Enter file full path: ");
     String path = sc.next();
@@ -30,7 +30,7 @@ public class Loggin {
       while (line != null) {
         String[] fields = line.split(" ");
         Instant instant = Instant.parse(fields[1]);
-        users.add(new User(fields[0], instant));
+        users.add(new LogEntry(fields[0], instant));
 
         line = reader.readLine();
       }
