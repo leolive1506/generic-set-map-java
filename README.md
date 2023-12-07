@@ -23,6 +23,63 @@ public static <T extends Comparable<? super T>> T max(List<T> list) {
   return max;
 }  
 ```
+
+## Tipos curingas
+- generics são invariantes
+- representado por "?"
+```java
+public static void printList(List<?> list) {
+  for (Object obj : list) {
+  System.out.println(obj);
+}
+}
+```
+- é possivel fazer metodos que recebem um generico de "qualquer tipo" porém não é possível adicionar dados a uma coleção tipo curinga
+```java
+public static void main(String[] args) {
+  List<?> list = new ArrayList<Integer>();
+  list.add(3); // erro de compilação
+}
+```
+
+- delimitar um curinga
+  - aceitara qualquer lista que extenda Shape
+```java
+public static double totalArea(List<? extends Shape> list) {}
+```
+
+## Covariância (princio get/put)
+- Permite pegar (ler)
+- Não Permite alterar, adicionar
+```java
+List<Integer> intList = new ArrayList<Integer>();
+intList.add(10);
+intList.add(5);
+// aceita todo tipo que extende Number (Int, Double...)
+List<? extends Number> list = intList;
+Number x = list.get(0);
+
+// não permite adicionar pois não sabe se o tipo adicionado será compativel
+list.add(20); // erro de compilacao
+```
+
+## Contravariância (principio get/put)
+- permite adicionar
+- não permite pegar
+```java
+List<Object> myObjs = new ArrayList<Object>();
+myObjs.add("Maria");
+myObjs.add("Alex");
+
+// aceita qualqeur classe acima de Number (no caso Object)
+List<? super Number> myNums = myObjs;
+myNums.add(10); // permite adicionar normalmente
+myNums.add(3.14);
+
+// não permite atribuir, pois não sabe qual tipo estara nessa posição
+Number x = myNums.get(0); 
+```
+
 # Dicas gerais
 - list.compareTo
   - Compara se o primeiro é maior que segundo (do parametro)
