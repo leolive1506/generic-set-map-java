@@ -1,18 +1,10 @@
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-
+import map.Index;
 import set.exercicie.InstructorEx;
-import set.exercicie.Loggin;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // Loggin.main();
-        InstructorEx.main();
+        // InstructorEx.main();
+        Index.main();
     }
 }

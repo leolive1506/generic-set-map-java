@@ -111,6 +111,44 @@ Number x = myNums.get(0);
   - clear()
   - size()
   - removeIf(predicate)
+
+# Map<K,V>
+- coleção de pares, chave e valor
+- não admite repetições do objeto chave
+- os elementos são indexados pelo objeto chave (não possuem posição)
+- Acesso, inserção e remoção dos elementos são rapidos
+- Uso comum: cookies, local storage, qualquer modelo chave-valor
+- principais implementações: 
+  - HashMap
+    - mais rápido
+    - operações O(1) em tabelas hash
+    não ordenado
+  - TreeMap
+    - mais lento
+    - operações O(log (n)) em árvore rubro-negra)
+    - ordenado pelo compareTo do objeto (ou Comparator)
+  - LinkedHashMap
+    - velocidade intermediaria
+    - elementos ficam na ordem que foram adicionados
+## Princiapais metodos
+- baseado em equals e hashCode
+- se equals e hashCode não existir, é usada uma comparação de ponteiros
+- put (key, value)
+  - inserir numa determinada chave
+- remove (key)
+- containsKey(key)
+  - verifica se existe
+- get(key)
+  - pega elemento pela chave
+- clear()
+  - limpa conjunto
+- size()
+- keySet()
+  - return um Set<K> com as chaves contidas no map
+- values()
+  - retorna uma Collection<V> do tipo valor
+
+
 # Dicas gerais
 - list.compareTo
   - Compara se o primeiro é maior que segundo (do parametro)
